@@ -14,11 +14,11 @@ object Host {
             EnclaveHost.checkPlatformSupportsEnclaves(true)
             println("This platform supports enclaves in simulation, debug and release mode.")
         } catch (e: EnclaveLoadException) {
-            println("This platform does not support hardware enclaves: " + e.message)
+            println("Hi, This platform does not support hardware enclaves: " + e.message)
         }
 
         // Open connection.
-        val port = 9998
+        val port = 9999
         val acceptor = ServerSocket(port)
         val connection = acceptor.accept()
         val input = DataInputStream(connection.getInputStream())

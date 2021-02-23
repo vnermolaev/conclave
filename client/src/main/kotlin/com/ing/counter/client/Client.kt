@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
     val from = 5.toByte()
 
     // Connect to the host, it will send us a remote attestation (EnclaveInstanceInfo).
-    val socket = Socket("localhost", 9998)
+    val socket = Socket("localhost", 9999)
     val fromHost = DataInputStream(socket.getInputStream())
     val toHost = DataOutputStream(socket.getOutputStream())
 
